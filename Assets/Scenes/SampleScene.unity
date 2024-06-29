@@ -644,8 +644,8 @@ GameObject:
   - component: {fileID: 1669466665}
   - component: {fileID: 1669466664}
   - component: {fileID: 1669466667}
-  - component: {fileID: 1669466669}
   - component: {fileID: 1669466668}
+  - component: {fileID: 1669466669}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -761,7 +761,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: c5758a590a007164bac8f83c95e5afa4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -781,6 +781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1669466667}
   jumpForce: 5
+  moveSpeed: 1
 --- !u!114 &1669466669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,10 +808,18 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1b9e3e8c-7571-4a5c-b828-c9b86654d9b3
+    m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 19b1661a-1dfe-441e-b4a3-8742099ab7b9
+    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick]
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1669466668}
         m_TargetAssemblyTypeName: TestingInputSystem, Assembly-CSharp
-        m_MethodName: Jump
+        m_MethodName: Submit
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -820,8 +829,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 1b9e3e8c-7571-4a5c-b828-c9b86654d9b3
-    m_ActionName: Player/Jump[/Keyboard/space]
+    m_ActionId: 16a33513-4752-4e1f-a452-bdbe00e14d69
+    m_ActionName: UI/Submit[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
